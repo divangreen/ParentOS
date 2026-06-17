@@ -61,7 +61,9 @@ class DiapersController extends Notifier<DiapersState> {
   }
 
   /// "type tap = auto-save" -- logs immediately, no confirmation form.
-  Future<void> logDiaper(String type) async {
+  /// [loggedAt] defaults to now if omitted; pass an explicit value to
+  /// back-date a missed entry.
+  Future<void> logDiaper(String type, {DateTime? loggedAt}) async {
     final childId = _childId;
     if (childId == null) {
       state = const DiapersError('No active child');
@@ -74,7 +76,7 @@ class DiapersController extends Notifier<DiapersState> {
     }
 
     try {
-      await _api.createDiaper(accessToken: accessToken, childId: childId, type: type);
+      await _api.createDiaper(accessToken: accessToken, childId: childId, type: type, loggedAt: loggedAt);
       await _load(childId);
     } on ApiException catch (e) {
       state = DiapersError(e.message);

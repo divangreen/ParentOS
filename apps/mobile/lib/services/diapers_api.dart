@@ -10,11 +10,15 @@ class DiapersApi {
     required String accessToken,
     required String childId,
     required String type,
+    DateTime? loggedAt,
   }) async {
     final json = await _client.post(
       '/children/$childId/diapers',
       accessToken: accessToken,
-      body: {'type': type},
+      body: {
+        'type': type,
+        'logged_at': ?loggedAt?.toUtc().toIso8601String(),
+      },
     );
     return Diaper.fromJson(json as Map<String, dynamic>);
   }

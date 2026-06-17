@@ -80,7 +80,7 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | D-001 | ✅ Backend: POST /children/{id}/diapers | C-001 | 1h | P0 |
 | D-002 | ✅ Backend: GET /children/{id}/diapers?date= (includes wet/dirty counts) | D-001 | 1h | P0 |
 | D-003 | ✅ Backend: DELETE /children/{id}/diapers/{id} | D-001 | 1h | P1 |
-| D-004 | ✅ Frontend: Log Diaper bottom sheet (type tap = auto-save; time-edit not yet implemented, always logs "now") | C-004 | 2h | P0 |
+| D-004 | ✅ Frontend: Log Diaper bottom sheet (type tap = auto-save, time edit) | C-004 | 2h | P0 |
 | D-005 | ✅ Frontend: Diaper Riverpod provider | D-004 | 1h | P0 |
 | D-006 | ✅ Frontend: Diaper count on Home screen (wet X, dirty Y) | D-005 | 1h | P0 |
 

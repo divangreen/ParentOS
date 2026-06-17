@@ -19,8 +19,24 @@ class _LogDiaperSheet extends ConsumerStatefulWidget {
 }
 
 class _LogDiaperSheetState extends ConsumerState<_LogDiaperSheet> {
+  DateTime _loggedAt = DateTime.now();
   bool _isSubmitting = false;
   String? _error;
+
+  Future<void> _editTime() async {
+    final date = await showDatePicker(
+      context: context,
+      initialDate: _loggedAt,
+      firstDate: DateTime.now().subtract(const Duration(days: 7)),
+      lastDate: DateTime.now(),
+    );
+    if (date == null || !mounted) return;
+    final time = await showTimePicker(context: context, initialTime: TimeOfDay.fromDateTime(_loggedAt));
+    if (time == null) return;
+    setState(() {
+      _loggedAt = DateTime(date.year, date.month, date.day, time.hour, time.minute);
+    });
+  }
 
   Future<void> _logType(String type) async {
     setState(() {
@@ -28,7 +44,7 @@ class _LogDiaperSheetState extends ConsumerState<_LogDiaperSheet> {
       _error = null;
     });
     try {
-      await ref.read(diapersControllerProvider.notifier).logDiaper(type);
+      await ref.read(diapersControllerProvider.notifier).logDiaper(type, loggedAt: _loggedAt);
       if (mounted) Navigator.of(context).pop();
     } on ApiException catch (e) {
       setState(() => _error = e.message);
@@ -36,6 +52,8 @@ class _LogDiaperSheetState extends ConsumerState<_LogDiaperSheet> {
       if (mounted) setState(() => _isSubmitting = false);
     }
   }
+
+  String _fmt(DateTime dt) => dt.toLocal().toString().substring(0, 16);
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +64,14 @@ class _LogDiaperSheetState extends ConsumerState<_LogDiaperSheet> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text('Log Diaper', style: Theme.of(context).textTheme.titleLarge),
-          const SizedBox(height: 16),
+          const SizedBox(height: 8),
+          ListTile(
+            contentPadding: EdgeInsets.zero,
+            title: Text('Time: ${_fmt(_loggedAt)}'),
+            trailing: const Icon(Icons.edit),
+            onTap: _editTime,
+          ),
+          const SizedBox(height: 8),
           Text('Tap a type to save immediately', style: Theme.of(context).textTheme.bodySmall),
           const SizedBox(height: 16),
           Row(
