@@ -40,10 +40,10 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 |----|-------------|-------------|----------|---------|
 | C-001 | ✅ Backend: POST /children | A-001, S-002 | 2h | P0 |
 | C-002 | ✅ Backend: GET /children, GET /children/{id}, PATCH /children/{id} | C-001 | 2h | P0 |
-| C-003 | Frontend: Add Child screen (name, DOB picker, birth weight) | A-009 | 3h | P0 |
-| C-004 | Frontend: Riverpod child provider (load + cache active child) | C-003 | 2h | P0 |
-| C-005 | Frontend: Home screen header (child name + age) | C-004 | 1h | P0 |
-| C-006 | Frontend: Child Profile view screen | C-004 | 2h | P1 |
+| C-003 | ✅ Frontend: Add Child screen (name, DOB picker, birth weight) | A-009 | 3h | P0 |
+| C-004 | ✅ Frontend: Riverpod child provider (load + cache active child) | C-003 | 2h | P0 |
+| C-005 | ✅ Frontend: Home screen header (child name + age) | C-004 | 1h | P0 |
+| C-006 | ✅ Frontend: Child Profile view screen | C-004 | 2h | P1 |
 
 ---
 

@@ -2,6 +2,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'providers/auth_provider.dart';
+import 'screens/add_child_screen.dart';
+import 'screens/child_profile_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/signup_screen.dart';
@@ -15,6 +17,8 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
       GoRoute(path: '/login', builder: (context, state) => const LoginScreen()),
       GoRoute(path: '/signup', builder: (context, state) => const SignUpScreen()),
+      GoRoute(path: '/add-child', builder: (context, state) => const AddChildScreen()),
+      GoRoute(path: '/child', builder: (context, state) => const ChildProfileScreen()),
     ],
     redirect: (context, state) {
       // Still restoring a persisted session -- don't redirect yet, avoids a login flash.
