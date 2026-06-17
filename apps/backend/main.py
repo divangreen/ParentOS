@@ -24,6 +24,10 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.allowed_origins,
+    # Local dev tools (flutter run -d chrome, python -m http.server, etc.) use
+    # arbitrary ports -- allow any localhost/127.0.0.1 origin regardless of port,
+    # in addition to the explicit production origins in allow_origins above.
+    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
