@@ -11,7 +11,7 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | S-001 | ✅ Create Supabase project, enable Auth + Storage | — | 1h | P0 |
 | S-002 | ✅ Run DATABASE_SCHEMA.md migrations in Supabase | S-001 | 1h | P0 |
 | S-003 | ✅ Initialise FastAPI project in `/apps/backend` with Uvicorn, Poetry, `.env` | — | 2h | P0 |
-| S-004 | Initialise Flutter project in `/apps/mobile` with Riverpod, GoRouter, Material 3 | — | 2h | P0 |
+| S-004 | ✅ Initialise Flutter project in `/apps/mobile` with Riverpod, GoRouter, Material 3 | — | 2h | P0 |
 | S-005 | Configure GitHub Actions CI: lint + test on PR | S-003, S-004 | 2h | P0 |
 | S-006 | ✅ Deploy backend to Render (staging env) | S-003 | 1h | P0 |
 
