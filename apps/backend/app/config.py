@@ -1,0 +1,18 @@
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+
+    supabase_url: str
+    supabase_service_role_key: str
+
+    ai_provider: str = "openai"
+    openai_api_key: str = ""
+    ollama_base_url: str = "http://localhost:11434"
+
+    debug: bool = False
+    allowed_origins: list[str] = ["http://localhost:3000"]
+
+
+settings = Settings()
