@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, Request, status
-from supabase_auth.errors import AuthApiError
 from slowapi import Limiter
 from slowapi.util import get_remote_address
+from supabase_auth.errors import AuthApiError
 
 from app.database import get_supabase
 from app.dependencies import get_current_user_id

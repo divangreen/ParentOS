@@ -45,9 +45,8 @@ def test_get_daily_metrics_aggregates_correctly():
 
 def test_get_daily_metrics_no_data():
     sb = MagicMock()
-    sb.table.return_value.select.return_value.eq.return_value.gte.return_value.lt.return_value.execute.return_value = MagicMock(
-        data=[]
-    )
+    query = sb.table.return_value.select.return_value.eq.return_value.gte.return_value.lt.return_value
+    query.execute.return_value = MagicMock(data=[])
 
     metrics = get_daily_metrics(sb, "child-1", date.today())
 

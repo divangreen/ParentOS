@@ -12,7 +12,7 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | S-002 | ✅ Run DATABASE_SCHEMA.md migrations in Supabase | S-001 | 1h | P0 |
 | S-003 | ✅ Initialise FastAPI project in `/apps/backend` with Uvicorn, Poetry, `.env` | — | 2h | P0 |
 | S-004 | ✅ Initialise Flutter project in `/apps/mobile` with Riverpod, GoRouter, Material 3 | — | 2h | P0 |
-| S-005 | Configure GitHub Actions CI: lint + test on PR | S-003, S-004 | 2h | P0 |
+| S-005 | ✅ Configure GitHub Actions CI: lint + test on PR | S-003, S-004 | 2h | P0 |
 | S-006 | ✅ Deploy backend to Render (staging env) | S-003 | 1h | P0 |
 
 ---
@@ -54,9 +54,9 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | F-001 | ✅ Backend: POST /children/{id}/feedings with validation | C-001 | 2h | P0 |
 | F-002 | ✅ Backend: GET /children/{id}/feedings?date=&limit= | F-001 | 1h | P0 |
 | F-003 | ✅ Backend: DELETE /children/{id}/feedings/{id} | F-001 | 1h | P1 |
-| F-004 | Frontend: Log Feed bottom sheet (breast/bottle, side, duration/volume, time) | C-004 | 4h | P0 |
-| F-005 | Frontend: Feeding Riverpod provider (optimistic update on POST) | F-004 | 2h | P0 |
-| F-006 | Frontend: Feeding list on Home screen (last feed time, today's count) | F-005 | 2h | P0 |
+| F-004 | ✅ Frontend: Log Feed bottom sheet (breast/bottle, side, duration/volume, time) | C-004 | 4h | P0 |
+| F-005 | ✅ Frontend: Feeding Riverpod provider (optimistic update on POST) | F-004 | 2h | P0 |
+| F-006 | ✅ Frontend: Feeding list on Home screen (last feed time, today's count) | F-005 | 2h | P0 |
 
 ---
 
@@ -67,9 +67,9 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | SL-001 | ✅ Backend: POST /children/{id}/sleeps with validation (ended_at > started_at) | C-001 | 2h | P0 |
 | SL-002 | ✅ Backend: GET /children/{id}/sleeps?date= (includes total_minutes_today) | SL-001 | 1h | P0 |
 | SL-003 | ✅ Backend: DELETE /children/{id}/sleeps/{id} | SL-001 | 1h | P1 |
-| SL-004 | Frontend: Log Sleep bottom sheet (type, start time, end time, duration calculated) | C-004 | 3h | P0 |
-| SL-005 | Frontend: Sleep Riverpod provider | SL-004 | 2h | P0 |
-| SL-006 | Frontend: Sleep summary on Home screen (last sleep, total today) | SL-005 | 1h | P0 |
+| SL-004 | ✅ Frontend: Log Sleep bottom sheet (type, start time, end time, duration calculated) | C-004 | 3h | P0 |
+| SL-005 | ✅ Frontend: Sleep Riverpod provider | SL-004 | 2h | P0 |
+| SL-006 | ✅ Frontend: Sleep summary on Home screen (last sleep, total today) | SL-005 | 1h | P0 |
 
 ---
 
@@ -80,9 +80,9 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | D-001 | ✅ Backend: POST /children/{id}/diapers | C-001 | 1h | P0 |
 | D-002 | ✅ Backend: GET /children/{id}/diapers?date= (includes wet/dirty counts) | D-001 | 1h | P0 |
 | D-003 | ✅ Backend: DELETE /children/{id}/diapers/{id} | D-001 | 1h | P1 |
-| D-004 | Frontend: Log Diaper bottom sheet (type tap = auto-save, time edit) | C-004 | 2h | P0 |
-| D-005 | Frontend: Diaper Riverpod provider | D-004 | 1h | P0 |
-| D-006 | Frontend: Diaper count on Home screen (wet X, dirty Y) | D-005 | 1h | P0 |
+| D-004 | ✅ Frontend: Log Diaper bottom sheet (type tap = auto-save; time-edit not yet implemented, always logs "now") | C-004 | 2h | P0 |
+| D-005 | ✅ Frontend: Diaper Riverpod provider | D-004 | 1h | P0 |
+| D-006 | ✅ Frontend: Diaper count on Home screen (wet X, dirty Y) | D-005 | 1h | P0 |
 
 ---
 
@@ -110,7 +110,7 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | SEC-001 | ✅ Backend: API request logging middleware (IP, endpoint, user_id) | S-003 | 2h | P0 |
 | SEC-002 | ✅ Backend: Rate limiting on /auth/login (5 req/min/IP, slowapi) | A-003 | 1h | P0 |
 | SEC-003 | ✅ Supabase: Confirm RLS active on all 6 tables, write integration test | S-002 | 2h | P0 |
-| SEC-004 | Frontend: Confirm flutter_secure_storage for all tokens (no SharedPreferences) | A-006 | 1h | P0 |
+| SEC-004 | ✅ Frontend: Confirm flutter_secure_storage for all tokens (no SharedPreferences) | A-006 | 1h | P0 |
 
 ---
 

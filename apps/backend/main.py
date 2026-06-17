@@ -37,7 +37,10 @@ async def log_requests(request: Request, call_next):
     ms = round((time.time() - start) * 1000)
     ip = get_remote_address(request)
     user_id = getattr(request.state, "user_id", "-")
-    print(f"ip={ip} method={request.method} path={request.url.path} status={response.status_code} ms={ms} user={user_id}")
+    print(
+        f"ip={ip} method={request.method} path={request.url.path} "
+        f"status={response.status_code} ms={ms} user={user_id}"
+    )
     return response
 
 

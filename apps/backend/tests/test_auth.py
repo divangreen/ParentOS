@@ -2,8 +2,8 @@
 Auth endpoint tests — requires a live Supabase project with email confirmation disabled.
 Run with: pytest tests/test_auth.py -v
 """
-import pytest
 from unittest.mock import MagicMock, patch
+
 from fastapi.testclient import TestClient
 
 from main import app

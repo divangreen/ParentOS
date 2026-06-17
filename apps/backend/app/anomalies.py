@@ -20,7 +20,10 @@ def detect_anomalies(metrics: dict) -> list[Anomaly]:
             {
                 "code": "low_feeding_count",
                 "severity": "warning",
-                "message": f"Only {metrics['feeding_count']} feedings logged today (newborns typically feed 8-12 times/day).",
+                "message": (
+                    f"Only {metrics['feeding_count']} feedings logged today "
+                    "(newborns typically feed 8-12 times/day)."
+                ),
             }
         )
 
@@ -46,7 +49,10 @@ def detect_anomalies(metrics: dict) -> list[Anomaly]:
             {
                 "code": "low_sleep_total",
                 "severity": "warning",
-                "message": f"Only {metrics['sleep_total_minutes']} minutes of sleep logged today (newborns typically sleep 14-17 hours/day).",
+                "message": (
+                    f"Only {metrics['sleep_total_minutes']} minutes of sleep logged today "
+                    "(newborns typically sleep 14-17 hours/day)."
+                ),
             }
         )
 
