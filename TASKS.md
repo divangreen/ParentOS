@@ -13,7 +13,7 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | S-003 | ✅ Initialise FastAPI project in `/apps/backend` with Uvicorn, Poetry, `.env` | — | 2h | P0 |
 | S-004 | Initialise Flutter project in `/apps/mobile` with Riverpod, GoRouter, Material 3 | — | 2h | P0 |
 | S-005 | Configure GitHub Actions CI: lint + test on PR | S-003, S-004 | 2h | P0 |
-| S-006 | Deploy backend to Railway (staging env) | S-003 | 1h | P0 |
+| S-006 | ✅ Deploy backend to Render (staging env) | S-003 | 1h | P0 |
 
 ---
 

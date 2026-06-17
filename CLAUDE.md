@@ -5,11 +5,11 @@
 ## Project Identity
 
 ```
-NAME:        [YOUR_PROJECT_NAME]
+NAME:        ParentOS
 STAGE:       POC
-STACK:       [e.g. Next.js / Python FastAPI / SQLite]
-REPO:        [github url]
-LAST_SYNC:   [auto-updated by architect-agent]
+STACK:       Flutter (planned) / Python FastAPI / Supabase Postgres
+REPO:        https://github.com/divangreen/ParentOS
+LAST_SYNC:   2026-06-18
 ```
 
 ## Startup Blueprint
