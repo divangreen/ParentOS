@@ -26,11 +26,11 @@ Each task is completable in under 4 hours. Dependencies listed as Task IDs.
 | A-003 | ✅ Backend: POST /auth/login — proxy to Supabase Auth | A-001 | 1h | P0 |
 | A-004 | ✅ Backend: POST /auth/refresh | A-001 | 1h | P0 |
 | A-005 | ✅ Backend: POST /auth/logout + rate limiting middleware | A-001 | 2h | P0 |
-| A-006 | Frontend: Supabase client setup + `flutter_secure_storage` token service | S-004 | 2h | P0 |
-| A-007 | Frontend: Sign Up screen (email, password, validation) | A-006 | 3h | P0 |
-| A-008 | Frontend: Log In screen | A-006 | 2h | P0 |
-| A-009 | Frontend: Auth state via Riverpod (persist session, redirect guard) | A-006, A-007, A-008 | 3h | P0 |
-| A-010 | Frontend: Log out action in Settings | A-009 | 1h | P0 |
+| A-006 | ✅ Frontend: Backend API client + `flutter_secure_storage` token service | S-004 | 2h | P0 |
+| A-007 | ✅ Frontend: Sign Up screen (email, password, validation) | A-006 | 3h | P0 |
+| A-008 | ✅ Frontend: Log In screen | A-006 | 2h | P0 |
+| A-009 | ✅ Frontend: Auth state via Riverpod (persist session, redirect guard) | A-006, A-007, A-008 | 3h | P0 |
+| A-010 | ✅ Frontend: Log out action (AppBar icon, not yet a dedicated Settings screen) | A-009 | 1h | P0 |
 
 ---
 
